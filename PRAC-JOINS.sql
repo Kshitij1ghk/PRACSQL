@@ -45,4 +45,3 @@ SELECT Customers.Fullname,Bookings.BookingID
 FROM Customers right JOIN Bookings
 ON Customers.CustomerID=Bookings.CustomerID;
 
--- SELF JOIN
