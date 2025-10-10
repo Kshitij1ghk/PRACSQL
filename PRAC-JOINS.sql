@@ -45,3 +45,21 @@ SELECT Customers.Fullname,Bookings.BookingID
 FROM Customers right JOIN Bookings
 ON Customers.CustomerID=Bookings.CustomerID;
 
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FullName VARCHAR(255),
+    JobTitle VARCHAR(100),
+    County VARCHAR(100),
+    LineManagerID INT
+);
+INSERT INTO Employees (EmployeeID, FullName, JobTitle, County, LineManagerID)
+VALUES
+(1, 'Seamus Hogan', 'Manager', 'Pinal County', 3),
+(2, 'Thomas Eriksson', 'Assistant', 'Pinal County', 1),
+(3, 'Simon Tolo', 'Head Chef', 'Gila County', 3),
+(4, 'Francesca Soffia', 'Assistant', 'Cochise County', 1),
+(5, 'Emily Sierra', 'Accountant', 'Cochise County', 1),
+(6, 'Greta Galkina', 'Accountant', 'Cochise County', 3);
+
+SELECT e1.FullName as 'LINE MANAGER',e2.FullName AS 'Employee' FROM Employees AS e1 INNER
+JOIN Employees AS e2 ON e1.EmployeeID=e2.LineManagerID -- the output results set links the line managers with the employees they manage
