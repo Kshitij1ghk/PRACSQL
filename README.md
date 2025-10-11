@@ -20,3 +20,9 @@
 # UNION OPERATOR
 -  you can use UNION operator to join two SELECT statements in order to combine their results sets and present as one table.
 - few best practices that must be observed when creating SQL SELECT statements with a UNION operator. Every SELECT statement must have the same number of columns. All related columns have similar data types, and all related columns must have the same order in every SELECT statement-
+
+# LAB 1
+- Task 1: Little Lemon want a list of all customers who have made bookings. Write an INNER JOIN SQL statement to combine the full name and the phone number of each customer from the Customers table with the related booking date and 'number of guests' from the Bookings table.
+- Little Lemon want to view information about all existing customers with bookings that have been made so far. This data must include customers who haven’t made any booking yet. 
+
+Write a LEFT JOIN SQL statement to view the customer id from Customers table and the related booking id from the Bookings table. The expected output result should be the same as the following screenshot
