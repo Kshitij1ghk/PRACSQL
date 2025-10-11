@@ -16,3 +16,7 @@
 
 ## SELF JOIN
 - This is a special case where you need to join a table with itself to get specific information existing in the same table.  In this case you may choose the INNER JOIN, LEFT JOIN or RIGHT JOIN presented earlier to query the required data. 
+
+# UNION OPERATOR
+-  you can use UNION operator to join two SELECT statements in order to combine their results sets and present as one table.
+- few best practices that must be observed when creating SQL SELECT statements with a UNION operator. Every SELECT statement must have the same number of columns. All related columns have similar data types, and all related columns must have the same order in every SELECT statement-
