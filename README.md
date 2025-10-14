@@ -58,3 +58,4 @@ Example: SELECT MAX(Salary) FROM Employees;
 
 ## LAB2(HAVING) TASKS
 - [TASKS](https://www.coursera.org/learn/database-structures-and-management-with-mysql/ungradedLab/eubbG/exercise-grouping-data) 
+- [TASKS_2](https://www.mysqltutorial.org/tryit/query/mysql-having/#1)
