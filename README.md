@@ -56,5 +56,5 @@ Example: SELECT MAX(Salary) FROM Employees;
 
 - The HAVING clause is used in a GROUP BY query to filter grouped data. However, in the absence of GROUP BY clause, the HAVING clause behaves just like the WHERE clause
 
-## TASKS
+## LAB2(HAVING) TASKS
 - [TASKS](https://www.coursera.org/learn/database-structures-and-management-with-mysql/ungradedLab/eubbG/exercise-grouping-data) 
