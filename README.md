@@ -59,3 +59,22 @@ Example: SELECT MAX(Salary) FROM Employees;
 ## LAB2(HAVING) TASKS
 - [TASKS](https://www.coursera.org/learn/database-structures-and-management-with-mysql/ungradedLab/eubbG/exercise-grouping-data) 
 - [TASKS_2](https://www.mysqltutorial.org/tryit/query/mysql-having/#1)
+
+# REPLACE
+- The MySQL REPLACE statement is an extension to the SQL Standard. The MySQL REPLACE statement works as follows:
+
+Step 1. Insert a new row into the table, if a duplicate key error occurs.
+
+Step 2. If the insertion fails due to a duplicate-key error occurs:
+
+Delete the conflicting row that causes the duplicate key error from the table.
+Insert the new row into the table again.
+
+## Using MySQL REPLACE statement to update a row
+- REPLACE INTO table
+SET column1 = value1,
+    column2 = value2;
+
+## Using MySQL REPLACE to insert data from a SELECT statement
+- REPLACE INTO table_1(column_list)
+VALUES(Value-1,Value-2,Value-3)
