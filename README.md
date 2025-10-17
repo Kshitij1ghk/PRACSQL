@@ -63,12 +63,14 @@ Example: SELECT MAX(Salary) FROM Employees;
 # REPLACE
 - The MySQL REPLACE statement is an extension to the SQL Standard. The MySQL REPLACE statement works as follows:
 
-Step 1. Insert a new row into the table, if a duplicate key error occurs.
+- Step 1. Insert a new row into the table, if a duplicate key error occurs.
 
-Step 2. If the insertion fails due to a duplicate-key error occurs:
+- Step 2. If the insertion fails due to a duplicate-key error occurs:
 
-Delete the conflicting row that causes the duplicate key error from the table.
+- Delete the conflicting row that causes the duplicate key error from the table.
 Insert the new row into the table again.
+
+- if a primary key or unique key is not inserted inside when using the replace function it will simply add a new row unable to specify if its duplicate or not
 
 ## Using MySQL REPLACE statement to update a row
 - REPLACE INTO table
@@ -78,3 +80,14 @@ SET column1 = value1,
 ## Using MySQL REPLACE to insert data from a SELECT statement
 - REPLACE INTO table_1(column_list)
 VALUES(Value-1,Value-2,Value-3)
+
+# CONSTRAINTS
+- There are three main types of constraints in MySQL database, which can be used to enforce these rules. Key constraints which apply rules to key types. Domain constraints, used to govern the values that can be stored for a specific column and referential integrity constraints, which established rules for referential keys.
+
+[INFO ABOUT CONSTRAINTS](https://www.coursera.org/learn/database-structures-and-management-with-mysql/supplement/C5i5X/types-of-mysql-constraints)
+
+## updating related records or deleting them related Refrential Integrity
+- you can use the on the lead cascade option. 
+This option automatically deletes the related rows of data from the bookings table. And if you want to update a primary key value in the customers table, you can use the on update cascade option to automatically update the related rose in the bookings table.
+- use on Delete and on Update Cascade options to delete and automatically update the related rows of data in the Bookings table. 
+However, be aware that these actions depend on the Update and Delete operations taking place in the customers table

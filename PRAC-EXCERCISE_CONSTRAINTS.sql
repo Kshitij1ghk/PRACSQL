@@ -1,0 +1,9 @@
+USE Mangata_Gallo;
+CREATE TABLE Staff (StaffID INT NOT NULL PRIMARY KEY, PhoneNumber INT NOT NULL UNIQUE, FullName VARCHAR(100) NOT NULL);
+SHOW COLUMNS FROM Staff;
+CREATE TABLE Contactinfo(ContactID INT NOT NULL PRIMARY KEY,StaffID INT NOT NULL, Salary DECIMAL (7,2) NOT NULL
+,Location VARCHAR(50) DEFAULT 'Texas',StaffType VARCHAR(20) NOT NULL CHECK(StaffType='junior' OR StaffType='senior'));
+SHOW COLUMNS FROM Contactinfo;
+ALTER TABLE Contactinfo
+ADD CONSTRAINT FK_StaffID_ContactINFO
+FOREIGN KEY (StaffID) references Staff(StaffID);
