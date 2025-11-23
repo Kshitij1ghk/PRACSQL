@@ -6,3 +6,5 @@ REPLACE INTO orders(OrderID,ClientID,ProductID,Quantity,Cost)
 VALUES(10,"Cl2", "P2", 5,100);
 REPLACE INTO orders(OrderID,ClientID,ProductID,Quantity,Cost)
 VALUES(9,"Cl1", "P1", 10,500);
+REPLACE INTO orders(ClientID,ProductID,Quantity,Cost)
+VALUES('CL2','P2',20,900)

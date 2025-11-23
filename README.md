@@ -91,3 +91,35 @@ VALUES(Value-1,Value-2,Value-3)
 This option automatically deletes the related rows of data from the bookings table. And if you want to update a primary key value in the customers table, you can use the on update cascade option to automatically update the related rose in the bookings table.
 - use on Delete and on Update Cascade options to delete and automatically update the related rows of data in the Bookings table. 
 However, be aware that these actions depend on the Update and Delete operations taking place in the customers table
+
+# ALTER TABLE
+- The ALTER TABLE statement is often used alongside different SQL commands. Here's a quick overview of some common commands used with the ALTER TABLE statemen. The MODIFY command is used to target specific columns and instruct SQL to make changes to them. The ADD command can be used to add a new column to a table and the DROP command can be used to drop or delete a column from the table.
+
+- ALTER TABLE table_name
+MODIFY column1_name VARCHAR(60)
+
+# COPY TABLE
+- copy data from an existing table to a new table within the same database, copy a table to a new location while ensuring it retains its constraints, and copy data from an existing table to a new table from a different database
+
+- You first need to identify the database and the table you want to copy the data from. Next, determine the columns you want to copy. Either all columns or just some of them. Then use the CREATE TABLE statement to build a new table with a relevant table name. Finally, use the SELECT command to structure the new table by specifying the columns you want to copy data from
+
+- when using the copy table methods the key constraints are not copied
+
+## within a database
+- CREATE TABLE new_table_name AS(you can include or exclude as but it is good for readibility)
+SELECT COLUMNS 
+FROM existing_table_name
+
+## in between two databases
+- CREATE TABLE database_X_name.nerw_table_name
+SELECT COLUMNS 
+FROM database_Y_name.existing_table_name
+
+## to copy the constraints as well
+ - CREATE TABLE new_table_name like table_name
+
+# SUBQUERY
+- a subquery is a query within another query. In other words, it's an inner query placed within an outer query. The inner query is viewed as the child query and the outer query as the parent query. 
+-  The inner query or subquery executes first and its results are then passed to the outer or parent query. You can also build multiple subqueries in MySQL. The outer query is presented like any normal query. It contains select, from, and where clauses. 
+-  When executed, a subquery can return any of the following results: a single value, a single row, a single column, or multiple rows of one or more columns.
+- A subquery can be placed before or after a comparison operator in the where clause of your parent query. 
